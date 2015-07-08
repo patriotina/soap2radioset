@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+
+<h3>Cправочник видов РЭС из Единого технического справочника РЭС и ВЧУ</h3>
+    <select>
+     {% for ets in etskindlist %}
+        <option value="{{ets.KindNum}}">{{ ets.KindName }} </option>
+     {% endfor %}
+     </select>
+<h3>Справочник наименований РЭС из Единого технического справочника РЭС и ВЧУ</h3>
+17500 наименований!!!
+<select>
+    {% for etstype in dicetstype %}
+    <option value="{{ etstype.TypeId }}">{{ etstype.TypeName }}</option>
+    {% endfor %}
+</select>
+
+<h3>Список территориальных Управлений Роскомнадзора</h3>
+    <select>
+     {% for rsnparts in dicrsnparts %}
+        <option value="{{rsnparts.PartId}}">{{ rsnparts.PartName }}</option>
+     {% endfor %}
+     </select>
+
+<h3>Список типов антенн</h3>
+    <select>
+     {% for sectortype in dicsectortype %}
+        <option value="{{sectortype.sector_type_id}}">{{ sectortype.sector_type_name }}</option>
+     {% endfor %}
+     </select>
+
+ <h3>Список видов поляризации </h3>
+    <select>
+        {% for poltype in poltypelist %}
+        <option value="{{ poltype.polar_id}}">{{poltype.polar}}</option>
+        {% endfor %}
+    </select>
+
+<h3>Список классов излучения</h3>
+<select>
+    {% for radclass in dicradclass %}
+    <option value="{{radclass.rad_class_id}}">{{radclass.rad_class}}</option>
+    {% endfor %}
+</select>
+
+</body>
+</html>
