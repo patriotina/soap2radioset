@@ -22,7 +22,7 @@ class WellBehavedHttpsTransport(SudsHttpsTransport):
 def getSoap1():
 # Configure HTTP proxy from OS environment (e.g. http_proxy="http://proxy.example.com:8080")
     proxyOpts = dict()
-    proxyOpts = {'http': '@proxy.belkam.com:8090', 'https': '@proxy.belkam.com:8090'}
+    proxyOpts = {'http': 'panyukov:pea315@proxy.belkam.com:8090', 'https': 'panyukov:pea315@proxy.belkam.com:8090'}
 
 
 # Send log messages to console
