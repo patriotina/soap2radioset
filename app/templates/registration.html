@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+Куда (ТУ РКН):<br/>
+    <select>
+     {% for rsnparts in dicrsnparts %}
+        <option value="{{rsnparts.PartId}}" width="800px">{{ rsnparts.PartName }}</option>
+     {% endfor %}
+     </select><br/>
+
+ОГРН владельца:<br/>
+<input type="text"><br/>
+Номер исходящего:<br/>
+<input type="text"><br/>
+Дата исходящего:<br/>
+<input type="text"><br/>
+РЭС:<br/>
+
+Вид РЭС по ЕТС:<br/>
+    <select>
+     {% for ets in etskindlist %}
+        <option value="{{ets.KindNum}}">{{ ets.KindName }} </option>
+     {% endfor %}
+     </select><br/>
+
+Наименование РЭС по ЕТС:<br/>
+<select>
+    {% for etstype in dicetstype %}
+    <option value="{{ etstype.TypeId }}">{{ etstype.TypeName }}</option>
+    {% endfor %}
+</select><br/>
+
+Заводской (серийный, учетный) номер:<br/>
+<input type="text"><br/>
+Условия эксплуатации:<br/>
+<input type="text"><br/>
+Адрес места установки (КЛАДР):<br/>
+<input type="text"><br/>
+Регион:<br/>
+<input type="text"><br/>
+Район:<br/>
+<input type="text"><br/>
+Населенный пункт:<br/>
+<input type="text"><br/>
+Улица:<br/>
+<input type="text"><br/>
+Дом:<br/>
+<input type="text"><br/>
+Корпус:<br/>
+<input type="text"><br/>
+Строение:<br/>
+<input type="text"><br/>
+Квартира:<br/>
+<input type="text"><br/>
+
+Широта:<br/>
+<input type="text"><br/>
+Долгота:<br/>
+<input type="text"><br/>
+
+Обозначение в сети:<br/>
+<input type="text"><br/>
+Сектор:<br/>
+<input type="text"><br/>
+Тип антены:<br/>
+<input type="text"><br/>
+Азимут: (?)<br/>
+<input type="text"><br/>
+Высота подвеса:<br/>
+<input type="text"><br/>
+Поляризация:<br/>
+<input type="text"><br/>
+Мощность:<br/>
+<input type="text"><br/>
+Рабочие частоты:<br/>
+<input type="text"><br/>
+Номинал частоты передачи:<br/>
+<input type="text"><br/>
+Номинал частоты приема:<br/>
+<input type="text"><br/>
+Класс излучения:<br/>
+<input type="text"><br/>
+
+Основание:<br/>
+<input type="text"><br/>
+Тип основания:<br/>
+<input type="text"><br/>
+Номер основания:<br/>
+<input type="text"><br/>
+Дата основания:<br/>
+<input type="text"><br/>
+Обозначение в сети:<br/>
+<input type="text"><br/>
+Идентификатор строки в РИЧ:<br/>
+<input type="text"><br/>
+Код РЭС:<br/>
+<input type="text"><br/>
+Признак изменения адреса и координат относительно РИЧ:<br/>
+<input type="text"><br/>
+Позывной сигнал опознавания:<br/>
+<input type="text"><br/>
+Номер свидетельства о присвоении позывного сигнала опознавания:<br/>
+<input type="text"><br/>
+Дата свидетельства о присвоении позывного сигнала опознавания:<br/>
+<input type="text"><br/>
+Территория использования:<br/>
+<input type="text"><br/>
+Предпочитаемый срок действия свидетельства:<br/>
+<input type="text"><br/>
+
+</body>
+</html>

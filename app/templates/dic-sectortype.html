@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h3>Список типов антенн</h3>
+    <table border="1">
+     {% for sectortype in dicsectortype %}
+        <tr>
+            <td>{{sectortype.sector_type_id}}</td>
+            <td>{{ sectortype.sector_type_name }}</td>
+        </tr>
+
+     {% endfor %}
+     </table>
+</body>
+</html>

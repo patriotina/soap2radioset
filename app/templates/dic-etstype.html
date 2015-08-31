@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<h3>Справочник наименований РЭС из Единого технического справочника РЭС и ВЧУ</h3>
+17500 наименований!!!
+
+<table border="1px">
+    {% for etstype in dicetstype %}
+    <tr>
+        <td>{{ etstype.TypeId }}</td>
+        <td width="800px">{{ etstype.TypeName }}</td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
