@@ -83,6 +83,7 @@ def dicRadClass():
 
 @app.route('/registration')
 def regform():
+    user = {'nickname': 'Patriot'}
     dicetskind = soaprkn.getDicETSKind()
     dicetstype = soaprkn.getDicETSType()
     dicrsnparts = soaprkn.getDicRSNParts()
