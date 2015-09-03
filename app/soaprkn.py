@@ -6,6 +6,7 @@ from suds.client import Client
 from suds.transport.http import HttpTransport as SudsHttpTransport
 from suds.transport.https import HttpTransport as SudsHttpsTransport
 import os
+import proxypswd
 
 
 class WellBehavedHttpTransport(SudsHttpTransport):
@@ -22,7 +23,7 @@ class WellBehavedHttpsTransport(SudsHttpsTransport):
 def getSoap1():
 # Configure HTTP proxy from OS environment (e.g. http_proxy="http://proxy.example.com:8080")
     proxyOpts = dict()
-    proxyOpts = {'http': 'panyukov:pea315@proxy.belkam.com:8090', 'https': 'panyukov:pea315@proxy.belkam.com:8090'}
+    proxyOpts = {'http': username+':'+proxypswd+'@proxy.belkam.com:8090', 'https': username+':'+proxypswd+'@proxy.belkam.com:8090'}
 
 
 # Send log messages to console
